@@ -101,15 +101,37 @@ app.post('/api/addreg',async(req,res)=>{
         console.log(err);
     }
   });
+  app.post('/api/deletereg', async (req, res) => {
+    try {
+        let result = await registrationModelObj.deleteOne({_id:req.body._id});
+        console.log("Successfully Deleted Candidate : "+req.body._id);
+        res.send("Deleted"+req.body._id);
+    }
+    catch (err) {
+        console.log(err);
+    }
+});
 
 //email API
 app.post('/sendbrochure', async (req, res) => {
     try {
+        var bname="";
         console.log(req.body);
         let email = req.body.email;
         let course=req.body.course;
-        
-
+        if(course==="FSD")
+bname="FSD.pdf";
+else if(course==="ST")
+bname="ST.pdf";
+else if(course==="DSA")
+bname="DSA.pdf"
+else if(course==="CS")
+bname="CSA.pdf"
+else if(course==="RPA")
+bname="RPA.pdf"
+else if(course==="DM")
+bname="DM.pdf"
+console.log(bname);
         let mailTransporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
@@ -124,8 +146,8 @@ app.post('/sendbrochure', async (req, res) => {
             subject: 'Brochure',
             text: 'Thank you for showing your interest in joining ICT academy.Please check the detailed brochure attached herewith.',
             attachments: [{
-                filename: course,
-                path: './assets/'+course,
+                filename: bname,
+                path: './assets/'+bname,
                 contentType: 'application/pdf'
               }]
         };
