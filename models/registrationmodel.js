@@ -1,30 +1,34 @@
-const mongoose=require('mongoose');
-let mongooseSchema=mongoose.Schema;
-let regSchema=new mongooseSchema({
+const mongoose = require('mongoose');
+let mongooseSchema = mongoose.Schema;
+let regSchema = new mongooseSchema({
     name:
     {
-    type:String
+        type: String,
+        required: true
     },
 
     email:
     {
-        type:String  
-
+        type: String,
+        required: true
     },
     mobileno:
     {
-        type:String   
+        type: String,
+        required: true
 
     },
     course:
     {
-        type:String
+        type: String,
+        required: true
     },
     amount:
     {
-        type:Number
+        type: Number,
+        required: true
     }
 
 });
-var registrationModelObj=mongoose.model("registrations",regSchema);
-module.exports={registrationModelObj};
+var registrationModelObj = mongoose.model("registrations", regSchema);
+module.exports = { registrationModelObj };

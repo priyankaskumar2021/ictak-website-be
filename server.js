@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const { registrationModelObj } = require('./models/registrationmodel');
 const { courseModelObj } = require('./models/coursemodel');
 const nodemailer = require('nodemailer');
-
+const multer=require("multer");
 //require("dotenv").config();
 
 
@@ -37,6 +37,7 @@ mongoose.connect("mongodb+srv://priyanka:aadhav@cluster0.pc4p2.mongodb.net/ictak
     });
 
 
+app.use('/public/images', express.static('images'));
     //course API
 app.post('/api/addcourse', async (req, res) => {
     try {
@@ -61,6 +62,37 @@ app.get('/api/viewcourse', async (req, res) => {
         console.log(err);
     }
 });
+
+app.get('/api/viewretailcourse', async (req, res) => {
+    try {
+        
+        let result = await courseModelObj.find({category:"Retail"});
+        res.json(result);
+    }
+    catch (err) {
+        console.log(err);
+    }
+});
+app.get('/api/viewinstitutionalcourse', async (req, res) => {
+    try {
+        
+        let result = await courseModelObj.find({category:"Institutional"});
+        res.json(result);
+    }
+    catch (err) {
+        console.log(err);
+    }
+});
+app.get('/api/viewcorporatecourse', async (req, res) => {
+    try {
+        
+        let result = await courseModelObj.find({category:"Corporate"});
+        res.json(result);
+    }
+    catch (err) {
+        console.log(err);
+    }
+});
 app.post('/api/deletecourse', async (req, res) => {
     try {
         let result = await courseModelObj.deleteOne({_id:req.body._id});
@@ -75,9 +107,9 @@ app.post('/api/deletecourse', async (req, res) => {
 app.post('/api/updatecourse', async (req, res) => {
     try {
      console.log(req.body);
-        let result = await courseModelObj.updateOne({title:req.body.title},{$set:{type:req.body.type,description:req.body.description,cstatus:req.body.cstatus,catogory:req.body.category,about:req.body.about,entrance:req.body.entrance,commence:req.body.commence,orientation:req.body.orientation,lastdate:req.body.lastdate,fees:req.body.fees,duration:req.body.duration,objectives:req.body.objectives}});
-        console.log("Successfully Updated Course with title : "+req.body.title);
-        res.send("Updated"+req.body.title);
+        let result = await courseModelObj.updateOne({_id:req.body._id},{$set:{title:req.body.title,type:req.body.type,description:req.body.description,cstatus:req.body.cstatus,catogory:req.body.category,about:req.body.about,entrance:req.body.entrance,commence:req.body.commence,orientation:req.body.orientation,lastdate:req.body.lastdate,fees:req.body.fees,duration:req.body.duration,objectives:req.body.objectives}});
+        console.log("Successfully Updated Course with title : ",req.body._id);
+        res.send("Updated",req.body.title);
     }
     catch (err) {
         console.log(err);
@@ -106,6 +138,17 @@ app.post('/api/addreg',async(req,res)=>{
         let result = await registrationModelObj.deleteOne({_id:req.body._id});
         console.log("Successfully Deleted Candidate : "+req.body._id);
         res.send("Deleted"+req.body._id);
+    }
+    catch (err) {
+        console.log(err);
+    }
+});
+app.post('/api/updatereg', async (req, res) => {
+    try {
+     console.log(req.body);
+        let result = await registrationModelObj.updateOne({_id:req.body._id},{$set:{name:req.body.name,email:req.body.email,mobileno:req.body.mobileno,course:req.body.course,amount:req.body.amount}});
+        console.log("Successfully Updated Registration with id : "+req.body._id);
+        res.send("Updated");
     }
     catch (err) {
         console.log(err);
