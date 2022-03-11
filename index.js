@@ -12,8 +12,7 @@ const port = process.env.PORT || 3006;
 const path = require("path");
 
 
-
-//app.use(express.static(path.resolve(__dirname, "./client/build")))
+app.use(express.static(path.resolve(__dirname, "./build")))
 
 const cors = require('cors');
 app.use(cors())
