@@ -1,0 +1,78 @@
+.membersbtn{
+    background-color:skyblue;
+    margin-top: 10em;
+    float: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
+    text-align: center;
+    padding: 5px;
+    margin: 5em;
+    margin-left: 33em;   
+    font-size:large;
+    font-weight:bold;
+    border: 1px;
+}
+
+.paragraph{
+    text-decoration:solid;
+    text-align: center;
+    font-size:large;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+
+.head{
+     font-size: x-large;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.image{
+   margin-top: 5em;
+   margin-left: 24em;
+}
+.sub{
+    text-align: center;
+    margin-left:0em;
+}
+.students{
+    text-align:center;
+}
+.lists{
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.institute{
+    text-align: center;
+}
+
+.inst{
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+.faculty{
+    text-align: center;
+}
+.fac{
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+
+}
+
+.subhead{
+    font-size: x-large;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.para{
+    text-decoration:solid;
+    text-align: center;
+    font-size:large;
+    font-weight: bold;
+    box-sizing: border-box;
+}

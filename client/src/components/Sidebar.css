@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+
+.sidebar {
+  position: absolute;
+  width: 20%;
+  height: 80%;
+  background-image: linear-gradient(to right, #6dcef5, #fafaf9a4);
+  font-size: 0.65em;
+}
+.sidebar h1{
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.4em;
+  color:rgb(100, 9, 122);
+  display: block;
+  transition: all ease-out 300ms;
+  font-size: medium;
+}
+.nav {
+  position: relative;
+  margin: 0 15%;
+  text-align: right;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+
+.nav ul {
+  list-style: none;
+}
+ .nav li {
+    position: relative;
+    margin: 3.2em 0;
+ }
+  .links {
+      
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.4em;
+      color:rgb(100, 9, 122);
+      display: block;
+      transition: all ease-out 300ms;
+    }
+    
+    .links:hover {
+        color: rgba(rgb(252, 162, 214), 0.75);
+    }
+
+ 
+  .adminlogo{
+    height: 100px;
+    width:100px;
+  }
