@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6ade36ee.css",
+    "main.js": "/static/js/main.a17a24bc.js",
+    "static/js/787.7ba6233a.chunk.js": "/static/js/787.7ba6233a.chunk.js",
+    "static/media/ict.gif": "/static/media/ict.709e8eea5942933bbbbe.gif",
+    "static/media/corporate.jpg": "/static/media/corporate.7e2fae3d14fa83c919bb.jpg",
+    "static/media/membership.jpg": "/static/media/membership.e3ce925f93712497a2dd.jpg",
+    "static/media/partnership.jpg": "/static/media/partnership.d3d12c2c9e83113121b4.jpg",
+    "static/media/logo.png": "/static/media/logo.2e8e9a999e943c13c270.png",
+    "static/media/admin.png": "/static/media/admin.e5abc4bda166b3f51723.png",
+    "static/media/carouselimg1.jpg": "/static/media/carouselimg1.a04b1b2387717bb8e99a.jpg",
+    "static/media/chairman.png": "/static/media/chairman.4a9426caa93bb659bc1b.png",
+    "static/media/cat-3.jpg": "/static/media/cat-3.a54e04e9db793d174bce.jpg",
+    "static/media/cat-4.jpg": "/static/media/cat-4.7e07c574dc4fa4d8412d.jpg",
+    "static/media/cat-1.jpg": "/static/media/cat-1.c251f2cc3ceeaf4c7500.jpg",
+    "static/media/cat-2.jpg": "/static/media/cat-2.f7ebf3772415ecaa4706.jpg",
+    "static/media/registerbg.jpg": "/static/media/registerbg.6816c4b31b806ae76335.jpg",
+    "static/media/vinu.png": "/static/media/vinu.6bc4914bef46c89823cf.png",
+    "static/media/krishna.jpg": "/static/media/krishna.11e805c1c139cfe66920.jpg",
+    "static/media/meera.jpg": "/static/media/meera.11e805c1c139cfe66920.jpg",
+    "index.html": "/index.html",
+    "main.6ade36ee.css.map": "/static/css/main.6ade36ee.css.map",
+    "main.a17a24bc.js.map": "/static/js/main.a17a24bc.js.map",
+    "787.7ba6233a.chunk.js.map": "/static/js/787.7ba6233a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6ade36ee.css",
+    "static/js/main.a17a24bc.js"
+  ]
+}
