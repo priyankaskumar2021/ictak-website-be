@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const nodemailer = require('nodemailer');
 const courseRoute=require("./routes/courseroutes");
 const regRoute=require("./routes/registrationroutes");
+const partnerRoute=require("./routes/partnershiproutes");
 //require("dotenv").config();
 
 
@@ -40,6 +41,7 @@ app.use('/public/images', express.static('images'));
 //Routes
 app.use('/api/course', courseRoute);
 app.use('/api/registration', regRoute);
+app.use('/api/partner',partnerRoute);
 
 //email API
 app.post('/sendbrochure', async (req, res) => {
@@ -70,7 +72,7 @@ console.log(bname);
         });
           
         let mailDetails = {
-            from: 'priyankaskumar07@gmail.com',
+            from: 'ictkerala18@gmail.com',
             to: email,
             subject: 'Brochure',
             text: 'Thank you for showing your interest in joining ICT academy.Please check the detailed brochure attached herewith.',
