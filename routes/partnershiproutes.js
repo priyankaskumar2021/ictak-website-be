@@ -1,5 +1,5 @@
 const express = require('express');
-const { partnershipModelObj } = require('../models/partnershipmodel');
+const { partnershipModelObj } = require('../models/partnershipModel');
 const nodemailer = require('nodemailer');
 const partnershipRouter = express.Router();
 
